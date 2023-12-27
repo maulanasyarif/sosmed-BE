@@ -1,0 +1,24 @@
+GET http://localhost:5000/users
+###
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "username": "ddd",
+    "email": "dd@dd.dd",
+    "gender": "male",
+    "name": "DD",
+    "active": 1
+}
+###
+GET http://localhost:5000/users/658a91bf369ce7c6a2007900
+###
+PATCH http://localhost:5000/users/658a91bf369ce7c6a2007900
+Content-Type: application/json
+
+{
+    "username": "aa edited",
+    "name": "edited"
+}
+###
+DELETE http://localhost:5000/users/658a990305faf49f276fbacb
