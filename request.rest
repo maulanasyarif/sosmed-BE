@@ -22,3 +22,34 @@ Content-Type: application/json
 }
 ###
 DELETE http://localhost:5000/users/658a990305faf49f276fbacb
+###
+
+POST http://localhost:5000/auth/register/
+Content-Type: application/json
+
+{
+    "username": "test11",
+    "email": "test@test.test",
+    "gender": "male",
+    "name": "testing",
+    "password": "asdasd123"
+}
+###
+POST http://localhost:5000/auth/login
+Content-Type: application/json
+
+{
+    "email": "test@test.test",
+    "password": "asdasd123"
+}
+
+###
+POST http://localhost:5000/me/
+# Content-Type: application/x-www-form-urlencoded
+Content-Type: application/json
+Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAdGVzdC50ZXN0IiwidXNlcm5hbWUiOiJ0ZXN0MTEiLCJuYW1lIjoidGVzdGluZyIsIl9pZCI6IjY1OGMzNTY2ZjU3MDY3MjUwZDUxODM5ZCIsImlhdCI6MTcwMzY5MDY5NCwiZXhwIjoxNzAzNjk0Mjk0fQ.uc79b0Y03fBNQ1tKMicNeUpBUiFPIQajwtja8Hu-yFE
+
+###
+POST http://localhost:5000/logout
+Content-Type: application/json
+Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAdGVzdC50ZXN0IiwidXNlcm5hbWUiOiJ0ZXN0MTEiLCJuYW1lIjoidGVzdGluZyIsIl9pZCI6IjY1OGMzNTY2ZjU3MDY3MjUwZDUxODM5ZCIsImlhdCI6MTcwMzY5MDY5NCwiZXhwIjoxNzAzNjk0Mjk0fQ.uc79b0Y03fBNQ1tKMicNeUpBUiFPIQajwtja8Hu-yFE
